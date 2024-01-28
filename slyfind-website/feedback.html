@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Contact Us</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+ <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+  
+  .navbar {
+    background-color:#0a2472;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-evenly;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .text-slyfind{
+    display: flex;
+    flex-direction:row; 
+    align-items: center;
+  }
+  .nav-items{
+      display: flex;
+      flex-direction:row; 
+      align-items: center;
+  }
+  .navbar li {
+    padding: 15px;
+  }
+  
+  
+  img{
+    display: block;
+    max-width: 100%;
+  }
+  
+  
+  .list {
+    display: flex;
+    justify-content: space-between;
+   
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    opacity: 0;
+    margin-left: 10px;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 100px;
+    color: black;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+  }
+  
+  .slide-in {
+    transform: translateY(-50px);
+    animation: slideIn 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    to {
+        transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    to {
+        transform: translateX(-10px);
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .navbar {
+      height: 300px;
+      font-size: 14px;
+      
+    }
+    #contactForm{
+      margin-top: 200px;
+    }
+  }
+   
+  @media only screen and (max-width:1160px){
+    .navbar {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 3rem;
+    justify-content: space-evenly;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  }
+  #down {
+    background-color: black;
+    border-radius: 2px;
+  }
+
+    form {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 30px;
+      margin-top: 60px;
+      border-radius: 8px;
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"], input[type="email"], select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      background-color: #f5f5f5;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      background-color: #0a2472;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #0a2472;
+    }
+ </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+        <li><a class="fade-in" style="font-weight: bolder; display: block; max-width: 100%; font-size: 25px;"><img src="tth.png" alt="yes"  style="background-size: cover; height: 60px; width: 60px;"></a></li>
+        <li class="text-slyfind"><a href="#" class="fade-in" style="font-weight: bolder; font-size: 25px; right: 10px;">SLYFIND</a></li>
+    </ul>
+    <div class="list">
+        <ul class="nav-items">
+            <li><a href="uff-1.html" class="fade-in"><i class="fa-solid fa-house"></i>Home</a> </li>
+            <li><a href="profile.html" class="fade-in"><i class="fa-solid fa-circle-user"> </i>About Us</a> </li>
+            <li><a href="#" class="fade-in"><i class="fa-solid fa-file"> </i>Docs</a> </li>
+            <li><a href="#scroll" class="fade-in"><i class="fa-solid fa-chart-simple"> </i>Features</a> </li>
+            <li><a href="#" class="fade-in"><i class="fa-regular fa-file"> </i>References</a> </li>
+            <li><a href="feedback.html" class="fade-in"><i class="fa-solid fa-address-card"> </i>Feedback</a> </li>
+            <!-- <li><a href="#" class="fade-in" id="down"><i class="fa-solid fa-download"> </i>Download</a> </li> -->
+        </ul>
+    </div>
+    <ul></ul>
+</nav>
+  <br><br><br><br>br
+ <form id="contactForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+    <label for="subject">Subject:</label><br>
+    <select id="subject" name="subject" required>
+      <option value="newFeature">Ask for a New Feature</option>
+      <option value="other">Other</option>
+    </select><br>
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" required></textarea><br>
+    <input type="submit" value="Submit">
+ </form>
+
+ <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+    });
+ </script>
+</body>
+</html>
