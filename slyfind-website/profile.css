@@ -1,0 +1,158 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+/* ------------------------------ */
+
+.navbar {
+  background-color:#0a2472;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-evenly;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.text-slyfind{
+  display: flex;
+  flex-direction:row; 
+  align-items: center;
+}
+.nav-items{
+    display: flex;
+    flex-direction:row; 
+    align-items: center;
+}
+.navbar li {
+  padding: 15px;
+}
+
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+
+.list {
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  opacity: 0;
+  margin-left: 10px;
+}
+
+.header {
+  text-align: center;
+  padding: 100px;
+  color: black;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.slide-in {
+  transform: translateY(-50px);
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  to {
+      transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  to {
+      transform: translateX(-10px);
+  }
+}
+ 
+#down {
+  background-color: black;
+  border-radius: 2px;
+}
+
+
+/* ------------------------------------------------ */
+.profiles-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.profile {
+  flex: 1;
+  background-color: lightblue;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+
+}
+
+.profile:hover {
+  transform: scale(1.05);
+  z-index: 2;
+  opacity: 1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.profile:not(:hover) {
+opacity: 0.7;
+}
+
+
+.expanded {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  background-color: lightblue;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  animation: expand 0.5s ease-in-out;
+}
+
+@keyframes expand {
+  from {
+      transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+      transform: translate(-50%, -50%) scale(2);
+  }
+}
